@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+</head>
+<body style="background-color:#b997e0;">
+
+
+    Recommended Artists for <b>{{ artist }}</b>: <br>
+    <br>
+
+    <form action='/profile' method="POST">
+        <input type="text" name="artist">
+        <input type="submit" value="Find Another Artist">
+    </form>
+    <br>
+
+    <form action='/' method="POST">
+        <input type="submit" value="Return to Dashboard">
+    </form>
+    <br>
+    
+    {% for i in range(recs|length) %}
+        <a href="{{ links[recs[i]] }}">{{recs[i]}}</a><br>
+   
+        Lyrical Content:<br>
+        {{ stats[i]['Lyrical/Misc'].round(3) }} Misc. Lyricism <br>
+        {{ stats[i]['Bragging/Combative'].round(3) }} Flexing & Threats<br>
+        {{ stats[i]['Money/Party'].round(3) }} Money & Partying <br>
+        {{ stats[i]['Romance/Sex'].round(3) }} Sex & Romance<br>
+        <br>
+
+        Flow Statistics:<br>
+        {{ (stats[i]['unique_word_rate'] * 100).round(1) }}% Word Uniqueness <br>
+        {{ stats[i]['syllables_per_line'].round(1) }} Syllables/Line<br>
+        <br>
+
+        Style<br> 
+        {{ stats[i]['cluster'] }} <br>
+        <br>
+    {% endfor %}
+   
+
+</body>
+</html>
