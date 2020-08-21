@@ -4,43 +4,104 @@
 
 <head>
 </head>
-<body style="background-color:#b997e0;">
+<body style="background-color:goldenrod;">
 
-
-    Recommended Artists for <b>{{ artist }}</b>: <br>
-    <br>
 
     <form action='/profile' method="POST">
         <input type="text" name="artist">
-        <input type="submit" value="Find Another Artist">
+        <input type="submit" value="Find Artist">
     </form>
     <br>
 
+
+
+    <div class='subtitle'>artists like
+        <span class='title'>{{ artist }}</span>
+        <br> 
+        </div>
+        <br>
+    <div class='container'>
+
+    {% for i in range(recs|length) %}
+        <div class='artist{{i}}'>
+        <span class='rec-name'><a href="{{ links[recs[i]] }}" style="text-decoration: none;color: purple;">{{recs[i]}}</a></span><br>
+        
+        {% set total = stats[i]['Lyrical/Misc'] + stats[i]['Bragging/Combative'] + stats[i]['Money/Party'] + stats[i]['Romance/Sex'] %}
+        <span class='stat-category'>Lyrical Content</span><br>
+        
+        <span class='stats'>
+        {{ ((stats[i]['Bragging/Combative'] / total) * 100).round(0) }}% Flexing<br>
+        {{ ((stats[i]['Money/Party'] / total) * 100).round(0) }}% Turn-Up <br>
+        {{ ((stats[i]['Romance/Sex'] / total) * 100).round(0) }}% Sex & Romance<br>
+        {{ ((stats[i]['Lyrical/Misc'] / total) * 100).round(0) }}% Lyricism <br>
+        </span>
+        <br>
+
+        <span class='stat-category'>Flow Statistics</span><br>
+        <span class='stats'>
+        {{ (stats[i]['unique_word_rate'] * 100).round(1) }}% word uniqueness <br>
+        {{ stats[i]['syllables_per_line'].round(1) }} syllables/line<br>
+        </span>
+        <br>
+
+        <span class='stat-category'>Style</span><br> 
+        <span class='style'>
+        {{ stats[i]['cluster'] }} <br>
+        </span>
+        <br>
+        </div>
+    {% endfor %}
+
+    </div>
+    
     <form action='/' method="POST">
         <input type="submit" value="Return to Dashboard">
     </form>
     <br>
-    
-    {% for i in range(recs|length) %}
-        <a href="{{ links[recs[i]] }}">{{recs[i]}}</a><br>
-   
-        Lyrical Content:<br>
-        {{ stats[i]['Lyrical/Misc'].round(3) }} Misc. Lyricism <br>
-        {{ stats[i]['Bragging/Combative'].round(3) }} Flexing & Threats<br>
-        {{ stats[i]['Money/Party'].round(3) }} Money & Partying <br>
-        {{ stats[i]['Romance/Sex'].round(3) }} Sex & Romance<br>
-        <br>
 
-        Flow Statistics:<br>
-        {{ (stats[i]['unique_word_rate'] * 100).round(1) }}% Word Uniqueness <br>
-        {{ stats[i]['syllables_per_line'].round(1) }} Syllables/Line<br>
-        <br>
+   <style>
+       .container{
+           display: grid;
+           grid-gap: 5px;
+           grid-template-columns: repeat(3, 1fr);
+           justify-items: center;
+       }
 
-        Style<br> 
-        {{ stats[i]['cluster'] }} <br>
-        <br>
-    {% endfor %}
-   
+       .artist3 {
+           grid-column-start: 1; 
+       }
+
+       .title {
+            font-size: 50px;
+            font-weight: bold;
+       }
+
+       .subtitle {
+            font-size: 35px;
+            font-weight: bold;
+       }
+
+       .stat-category {
+            font-size: 15px;
+            font-family: "impact";
+       }
+
+       .rec-name {
+            font-size: 35px;
+            font-weight: bold;
+       }
+
+       .stats {
+            font-size: 20px;
+            font-weight: bold;
+       }
+
+       .style {
+            font-size: 25px;
+            font-weight: bold;
+            color: purple;
+       }
+   </style>
 
 </body>
 </html>

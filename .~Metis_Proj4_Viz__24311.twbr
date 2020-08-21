@@ -1,0 +1,1277 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20202.20.0614.2338                               -->
+<workbook source-build='2020.2.2 (20202.20.0614.2338)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='Metis_Proj4_Viz' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Avg' datatype='real' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='0.086499999999999994'>
+        <calculation class='tableau' formula='0.086499999999999994' />
+      </column>
+      <column caption='Avg.' datatype='real' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='8.5899999999999999'>
+        <calculation class='tableau' formula='8.5899999999999999' />
+      </column>
+      <column caption='Search' datatype='string' name='[Parameter 3]' param-domain-type='any' role='measure' type='nominal' value='&quot;&quot;'>
+        <calculation class='tableau' formula='&quot;&quot;' />
+      </column>
+    </datasource>
+    <datasource caption='tsne_df_v2' inline='true' name='federated.0ildqio1vqwb531ckthko179qolc' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='tsne_df_v2' name='textscan.0aiu4du0tr2fzg15s9lxd0agmxe3'>
+            <connection class='textscan' directory='/Users/Kelso/Metis/rapgeo' filename='tsne_df_v2.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0aiu4du0tr2fzg15s9lxd0agmxe3' name='tsne_df_v2.csv' table='[tsne_df_v2#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='artist' ordinal='1' />
+            <column datatype='real' name='Lyricism' ordinal='2' />
+            <column datatype='real' name='Flexing' ordinal='3' />
+            <column datatype='real' name='Turn-Up' ordinal='4' />
+            <column datatype='real' name='Sex &amp; Romance' ordinal='5' />
+            <column datatype='real' name='words_per_line' ordinal='6' />
+            <column datatype='real' name='unique_words' ordinal='7' />
+            <column datatype='real' name='Unique Word Rate' ordinal='8' />
+            <column datatype='real' name='Syllables Per Line' ordinal='9' />
+            <column datatype='real' name='syllables_per_word' ordinal='10' />
+            <column datatype='string' name='cluster' ordinal='11' />
+            <column datatype='real' name='tsne-2d-one' ordinal='12' />
+            <column datatype='real' name='tsne-2d-two' ordinal='13' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0aiu4du0tr2fzg15s9lxd0agmxe3' name='tsne_df_v2.csv' table='[tsne_df_v2#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='artist' ordinal='1' />
+            <column datatype='real' name='Lyricism' ordinal='2' />
+            <column datatype='real' name='Flexing' ordinal='3' />
+            <column datatype='real' name='Turn-Up' ordinal='4' />
+            <column datatype='real' name='Sex &amp; Romance' ordinal='5' />
+            <column datatype='real' name='words_per_line' ordinal='6' />
+            <column datatype='real' name='unique_words' ordinal='7' />
+            <column datatype='real' name='Unique Word Rate' ordinal='8' />
+            <column datatype='real' name='Syllables Per Line' ordinal='9' />
+            <column datatype='real' name='syllables_per_word' ordinal='10' />
+            <column datatype='string' name='cluster' ordinal='11' />
+            <column datatype='real' name='tsne-2d-one' ordinal='12' />
+            <column datatype='real' name='tsne-2d-two' ordinal='13' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[tsne_df_v2.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[tsne_df_v2.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tsne_df_v2.csv_FF8E70D2E5214D7F84125D28863229ED]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>artist</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[artist]</local-name>
+            <parent-name>[tsne_df_v2.csv]</parent-name>
+            <remote-alias>artist</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tsne_df_v2.csv_FF8E70D2E5214D7F84125D28863229ED]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lyricism</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Lyricism]</local-name>
+            <parent-name>[tsne_df_v2.csv]</parent-name>
+            <remote-alias>Lyricism</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tsne_df_v2.csv_FF8E70D2E5214D7F84125D28863229ED]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Flexing</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Flexing]</local-name>
+            <parent-name>[tsne_df_v2.csv]</parent-name>
+            <remote-alias>Flexing</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tsne_df_v2.csv_FF8E70D2E5214D7F84125D28863229ED]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Turn-Up</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Turn-Up]</local-name>
+            <parent-name>[tsne_df_v2.csv]</parent-name>
+            <remote-alias>Turn-Up</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tsne_df_v2.csv_FF8E70D2E5214D7F84125D28863229ED]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sex &amp; Romance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Sex &amp; Romance]</local-name>
+            <parent-name>[tsne_df_v2.csv]</parent-name>
+            <remote-alias>Sex &amp; Romance</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tsne_df_v2.csv_FF8E70D2E5214D7F84125D28863229ED]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>words_per_line</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[words_per_line]</local-name>
+            <parent-name>[tsne_df_v2.csv]</parent-name>
+            <remote-alias>words_per_line</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tsne_df_v2.csv_FF8E70D2E5214D7F84125D28863229ED]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unique_words</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[unique_words]</local-name>
+            <parent-name>[tsne_df_v2.csv]</parent-name>
+            <remote-alias>unique_words</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tsne_df_v2.csv_FF8E70D2E5214D7F84125D28863229ED]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unique Word Rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Unique Word Rate]</local-name>
+            <parent-name>[tsne_df_v2.csv]</parent-name>
+            <remote-alias>Unique Word Rate</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tsne_df_v2.csv_FF8E70D2E5214D7F84125D28863229ED]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Syllables Per Line</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Syllables Per Line]</local-name>
+            <parent-name>[tsne_df_v2.csv]</parent-name>
+            <remote-alias>Syllables Per Line</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tsne_df_v2.csv_FF8E70D2E5214D7F84125D28863229ED]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>syllables_per_word</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[syllables_per_word]</local-name>
+            <parent-name>[tsne_df_v2.csv]</parent-name>
+            <remote-alias>syllables_per_word</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tsne_df_v2.csv_FF8E70D2E5214D7F84125D28863229ED]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cluster</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cluster]</local-name>
+            <parent-name>[tsne_df_v2.csv]</parent-name>
+            <remote-alias>cluster</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tsne_df_v2.csv_FF8E70D2E5214D7F84125D28863229ED]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tsne-2d-one</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tsne-2d-one]</local-name>
+            <parent-name>[tsne_df_v2.csv]</parent-name>
+            <remote-alias>tsne-2d-one</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tsne_df_v2.csv_FF8E70D2E5214D7F84125D28863229ED]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tsne-2d-two</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tsne-2d-two]</local-name>
+            <parent-name>[tsne_df_v2.csv]</parent-name>
+            <remote-alias>tsne-2d-two</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tsne_df_v2.csv_FF8E70D2E5214D7F84125D28863229ED]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.0ildqio1vqwb531ckthko179qolc].[sum:Sex &amp; Romance:qk]&quot;' value='Sex' />
+        </aliases>
+      </column>
+      <column caption='Search' datatype='real' name='[Calculation_1710734556706091008]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='' />
+      </column>
+      <column caption='Search Filter' datatype='boolean' name='[Calculation_1710734556707942401]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='CONTAINS(lower([artist]), lower([Parameters].[Parameter 3]))' />
+      </column>
+      <column datatype='real' name='[Flexing]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Lyricism]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Sex &amp; Romance]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Syllables Per Line]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Turn-Up]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Unique Word Rate]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='tsne_df_v2.csv' datatype='table' name='[__tableau_internal_object_id__].[tsne_df_v2.csv_FF8E70D2E5214D7F84125D28863229ED]' role='measure' type='quantitative' />
+      <column caption='Artist' datatype='string' name='[artist]' role='dimension' type='nominal' />
+      <column caption='Cluster' datatype='string' name='[cluster]' role='dimension' type='nominal' />
+      <column caption='Syllables Per Word' datatype='real' name='[syllables_per_word]' role='measure' type='quantitative' />
+      <column caption='Tsne-2D-One' datatype='real' name='[tsne-2d-one]' role='measure' type='quantitative' />
+      <column caption='Tsne-2D-Two' datatype='real' name='[tsne-2d-two]' role='measure' type='quantitative' />
+      <column caption='Unique Words' datatype='real' name='[unique_words]' role='measure' type='quantitative' />
+      <column caption='Words Per Line' datatype='real' name='[words_per_line]' role='measure' type='quantitative' />
+      <column-instance column='[Syllables Per Line]' derivation='Avg' name='[avg:Syllables Per Line:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Unique Word Rate]' derivation='Median' name='[med:Unique Word Rate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1710734556707942401]' derivation='None' name='[none:Calculation_1710734556707942401:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Syllables Per Line]' derivation='None' name='[none:Syllables Per Line:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Unique Word Rate]' derivation='None' name='[none:Unique Word Rate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[cluster]' derivation='None' name='[none:cluster:nk]' pivot='key' type='nominal' />
+      <column-instance column='[tsne-2d-one]' derivation='None' name='[none:tsne-2d-one:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[tsne-2d-two]' derivation='None' name='[none:tsne-2d-two:ok]' pivot='key' type='ordinal' />
+      <column-instance aggregation-param='90' column='[Unique Word Rate]' derivation='Percentile' name='[prc90:Unique Word Rate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Flexing]' derivation='Sum' name='[sum:Flexing:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Lyricism]' derivation='Sum' name='[sum:Lyricism:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Sex &amp; Romance]' derivation='Sum' name='[sum:Sex &amp; Romance:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Syllables Per Line]' derivation='Sum' name='[sum:Syllables Per Line:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Turn-Up]' derivation='Sum' name='[sum:Turn-Up:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Unique Word Rate]' derivation='Sum' name='[sum:Unique Word Rate:qk]' pivot='key' type='quantitative' />
+      <group caption='Action (Artist,Cluster,Tsne-2D-One,Tsne-2D-Two)' hidden='true' name='[Action (Artist,Cluster,Tsne-2D-One,Tsne-2D-Two)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[artist]' />
+          <groupfilter function='level-members' level='[cluster]' />
+          <groupfilter function='level-members' level='[none:tsne-2d-one:ok]' />
+          <groupfilter function='level-members' level='[none:tsne-2d-two:ok]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/Kelso/Documents/My Tableau Repository/Datasources/tsne_df_v2.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>tsne_df_v2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1260</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>artist</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[artist]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>artist</remote-alias>
+              <ordinal>1</ordinal>
+              <family>tsne_df_v2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1260</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lyricism</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Lyricism]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lyricism</remote-alias>
+              <ordinal>2</ordinal>
+              <family>tsne_df_v2.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1027</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Flexing</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Flexing]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Flexing</remote-alias>
+              <ordinal>3</ordinal>
+              <family>tsne_df_v2.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>979</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Turn-Up</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Turn-Up]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Turn-Up</remote-alias>
+              <ordinal>4</ordinal>
+              <family>tsne_df_v2.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>985</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sex &amp; Romance</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Sex &amp; Romance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Sex &amp; Romance</remote-alias>
+              <ordinal>5</ordinal>
+              <family>tsne_df_v2.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1012</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>words_per_line</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[words_per_line]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>words_per_line</remote-alias>
+              <ordinal>6</ordinal>
+              <family>tsne_df_v2.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1040</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>unique_words</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[unique_words]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>unique_words</remote-alias>
+              <ordinal>7</ordinal>
+              <family>tsne_df_v2.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>955</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Unique Word Rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Unique Word Rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Unique Word Rate</remote-alias>
+              <ordinal>8</ordinal>
+              <family>tsne_df_v2.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1040</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Syllables Per Line</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Syllables Per Line]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Syllables Per Line</remote-alias>
+              <ordinal>9</ordinal>
+              <family>tsne_df_v2.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1039</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>syllables_per_word</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[syllables_per_word]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>syllables_per_word</remote-alias>
+              <ordinal>10</ordinal>
+              <family>tsne_df_v2.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1039</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cluster</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[cluster]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cluster</remote-alias>
+              <ordinal>11</ordinal>
+              <family>tsne_df_v2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tsne-2d-one</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[tsne-2d-one]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tsne-2d-one</remote-alias>
+              <ordinal>12</ordinal>
+              <family>tsne_df_v2.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1260</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tsne-2d-two</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[tsne-2d-two]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tsne-2d-two</remote-alias>
+              <ordinal>13</ordinal>
+              <family>tsne_df_v2.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1251</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+        <filter class='categorical' column='[none:Calculation_1710734556707942401:nk]'>
+          <groupfilter function='member' level='[none:Calculation_1710734556707942401:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+        </filter>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:cluster:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Archetypal&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;R&amp;B&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Lyrical (Diverse)&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Lyrical (Dense)&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Club &amp; Trap&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0ildqio1vqwb531ckthko179qolc].[sum:Flexing:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0ildqio1vqwb531ckthko179qolc].[avg:Syllables Per Line:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0ildqio1vqwb531ckthko179qolc].[none:Syllables Per Line:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0ildqio1vqwb531ckthko179qolc].[sum:Syllables Per Line:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0ildqio1vqwb531ckthko179qolc].[sum:Turn-Up:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0ildqio1vqwb531ckthko179qolc]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0ildqio1vqwb531ckthko179qolc].[sum:Sex &amp; Romance:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0ildqio1vqwb531ckthko179qolc].[med:Unique Word Rate:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0ildqio1vqwb531ckthko179qolc].[none:Unique Word Rate:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0ildqio1vqwb531ckthko179qolc].[prc90:Unique Word Rate:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0ildqio1vqwb531ckthko179qolc].[sum:Unique Word Rate:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0ildqio1vqwb531ckthko179qolc].[sum:Lyricism:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Search' datatype='string' name='[Parameter 3]' param-domain-type='any' role='measure' type='nominal' value='&quot;&quot;'>
+          <calculation class='tableau' formula='&quot;&quot;' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='tsne_df_v2.csv' id='tsne_df_v2.csv_FF8E70D2E5214D7F84125D28863229ED'>
+            <properties context=''>
+              <relation connection='textscan.0aiu4du0tr2fzg15s9lxd0agmxe3' name='tsne_df_v2.csv' table='[tsne_df_v2#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='artist' ordinal='1' />
+                  <column datatype='real' name='Lyricism' ordinal='2' />
+                  <column datatype='real' name='Flexing' ordinal='3' />
+                  <column datatype='real' name='Turn-Up' ordinal='4' />
+                  <column datatype='real' name='Sex &amp; Romance' ordinal='5' />
+                  <column datatype='real' name='words_per_line' ordinal='6' />
+                  <column datatype='real' name='unique_words' ordinal='7' />
+                  <column datatype='real' name='Unique Word Rate' ordinal='8' />
+                  <column datatype='real' name='Syllables Per Line' ordinal='9' />
+                  <column datatype='real' name='syllables_per_word' ordinal='10' />
+                  <column datatype='string' name='cluster' ordinal='11' />
+                  <column datatype='real' name='tsne-2d-one' ordinal='12' />
+                  <column datatype='real' name='tsne-2d-two' ordinal='13' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.0ildqio1vqwb531ckthko179qolc'>
+      <datasources>
+        <datasource caption='tsne_df_v2' name='federated.0ildqio1vqwb531ckthko179qolc' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0ildqio1vqwb531ckthko179qolc'>
+        <column caption='Search Filter' datatype='boolean' name='[Calculation_1710734556707942401]' role='dimension' type='nominal'>
+          <calculation class='tableau' formula='CONTAINS(lower([artist]), lower([Parameters].[Parameter 3]))' />
+        </column>
+        <column-instance column='[Calculation_1710734556707942401]' derivation='None' name='[none:Calculation_1710734556707942401:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.0ildqio1vqwb531ckthko179qolc].[none:Calculation_1710734556707942401:nk]'>
+        <groupfilter function='member' level='[none:Calculation_1710734556707942401:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='TSNE' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Word Rate' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action3]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Syllables' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 4 (generated)' name='[Action4]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Topics' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Syllables'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tsne_df_v2' name='federated.0ildqio1vqwb531ckthko179qolc' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Avg.' datatype='real' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='8.5899999999999999'>
+              <calculation class='tableau' formula='8.5899999999999999' />
+            </column>
+            <column caption='Search' datatype='string' name='[Parameter 3]' param-domain-type='any' role='measure' type='nominal' value='&quot;&quot;'>
+              <calculation class='tableau' formula='&quot;&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0ildqio1vqwb531ckthko179qolc'>
+            <column caption='Search Filter' datatype='boolean' name='[Calculation_1710734556707942401]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CONTAINS(lower([artist]), lower([Parameters].[Parameter 3]))' />
+            </column>
+            <column datatype='real' name='[Syllables Per Line]' role='measure' type='quantitative' />
+            <column caption='Artist' datatype='string' name='[artist]' role='dimension' type='nominal' />
+            <column-instance column='[Syllables Per Line]' derivation='Avg' name='[avg:Syllables Per Line:qk]' pivot='key' type='quantitative' />
+            <column caption='Cluster' datatype='string' name='[cluster]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1710734556707942401]' derivation='None' name='[none:Calculation_1710734556707942401:nk]' pivot='key' type='nominal' />
+            <column-instance column='[artist]' derivation='None' name='[none:artist:nk]' pivot='key' type='nominal' />
+            <column-instance column='[tsne-2d-one]' derivation='None' name='[none:tsne-2d-one:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[tsne-2d-two]' derivation='None' name='[none:tsne-2d-two:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Syllables Per Line]' derivation='Sum' name='[sum:Syllables Per Line:qk]' pivot='key' type='quantitative' />
+            <column caption='Tsne-2D-One' datatype='real' name='[tsne-2d-one]' role='measure' type='quantitative' />
+            <column caption='Tsne-2D-Two' datatype='real' name='[tsne-2d-two]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ildqio1vqwb531ckthko179qolc].[Action (Artist,Cluster,Tsne-2D-One,Tsne-2D-Two)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[artist]' />
+              <groupfilter function='level-members' level='[cluster]' />
+              <groupfilter function='level-members' level='[none:tsne-2d-one:ok]' />
+              <groupfilter function='level-members' level='[none:tsne-2d-two:ok]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ildqio1vqwb531ckthko179qolc].[Action (Artist,Cluster,Tsne-2D-One,Tsne-2D-Two)]</column>
+            <column>[federated.0ildqio1vqwb531ckthko179qolc].[none:Calculation_1710734556707942401:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk]' value='false' />
+            <format attr='font-family' field='[federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk]' value='Impact' />
+            <format attr='font-size' field='[federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk]' value='12' />
+            <format attr='font-weight' field='[federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk]' value='normal' />
+            <format attr='color' field='[federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk]' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dotted' />
+            <format attr='stroke-size' id='refline0' value='4' />
+            <format attr='stroke-color' id='refline0' value='#000000' />
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+          <style-rule element='axis-title'>
+            <format attr='font-family' field='[federated.0ildqio1vqwb531ckthko179qolc].[sum:Syllables Per Line:qk]' value='Impact' />
+            <format attr='font-size' field='[federated.0ildqio1vqwb531ckthko179qolc].[sum:Syllables Per Line:qk]' value='12' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.0ildqio1vqwb531ckthko179qolc].[avg:Syllables Per Line:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0ildqio1vqwb531ckthko179qolc].[sum:Syllables Per Line:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-table' value-column='[Parameters].[Parameter 2]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f28e2b' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk]</rows>
+        <cols>[federated.0ildqio1vqwb531ckthko179qolc].[sum:Syllables Per Line:qk]</cols>
+      </table>
+      <simple-id uuid='{E4D8FDAD-A549-4D13-BAF3-F4AC87A01465}' />
+    </worksheet>
+    <worksheet name='TSNE'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tsne_df_v2' name='federated.0ildqio1vqwb531ckthko179qolc' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Search' datatype='string' name='[Parameter 3]' param-domain-type='any' role='measure' type='nominal' value='&quot;&quot;'>
+              <calculation class='tableau' formula='&quot;&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0ildqio1vqwb531ckthko179qolc'>
+            <column caption='Search Filter' datatype='boolean' name='[Calculation_1710734556707942401]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CONTAINS(lower([artist]), lower([Parameters].[Parameter 3]))' />
+            </column>
+            <column caption='Artist' datatype='string' name='[artist]' role='dimension' type='nominal' />
+            <column caption='Cluster' datatype='string' name='[cluster]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1710734556707942401]' derivation='None' name='[none:Calculation_1710734556707942401:nk]' pivot='key' type='nominal' />
+            <column-instance column='[artist]' derivation='None' name='[none:artist:nk]' pivot='key' type='nominal' />
+            <column-instance column='[cluster]' derivation='None' name='[none:cluster:nk]' pivot='key' type='nominal' />
+            <column-instance column='[tsne-2d-one]' derivation='None' name='[none:tsne-2d-one:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[tsne-2d-two]' derivation='None' name='[none:tsne-2d-two:qk]' pivot='key' type='quantitative' />
+            <column caption='Tsne-2D-One' datatype='real' name='[tsne-2d-one]' role='measure' type='quantitative' />
+            <column caption='Tsne-2D-Two' datatype='real' name='[tsne-2d-two]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.0ildqio1vqwb531ckthko179qolc].[none:Calculation_1710734556707942401:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0ildqio1vqwb531ckthko179qolc].[none:tsne-2d-one:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.0ildqio1vqwb531ckthko179qolc].[none:tsne-2d-two:qk]' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ildqio1vqwb531ckthko179qolc].[none:cluster:nk]' />
+              <text column='[federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ildqio1vqwb531ckthko179qolc].[none:tsne-2d-one:qk]</rows>
+        <cols>[federated.0ildqio1vqwb531ckthko179qolc].[none:tsne-2d-two:qk]</cols>
+      </table>
+      <simple-id uuid='{76994099-526F-4E26-9B89-AF2B5FB7DDB7}' />
+    </worksheet>
+    <worksheet name='Topics'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tsne_df_v2' name='federated.0ildqio1vqwb531ckthko179qolc' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Search' datatype='string' name='[Parameter 3]' param-domain-type='any' role='measure' type='nominal' value='&quot;&quot;'>
+              <calculation class='tableau' formula='&quot;&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0ildqio1vqwb531ckthko179qolc'>
+            <column caption='Search Filter' datatype='boolean' name='[Calculation_1710734556707942401]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CONTAINS(lower([artist]), lower([Parameters].[Parameter 3]))' />
+            </column>
+            <column datatype='real' name='[Flexing]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Lyricism]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Sex &amp; Romance]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Turn-Up]' role='measure' type='quantitative' />
+            <column caption='Artist' datatype='string' name='[artist]' role='dimension' type='nominal' />
+            <column caption='Cluster' datatype='string' name='[cluster]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1710734556707942401]' derivation='None' name='[none:Calculation_1710734556707942401:nk]' pivot='key' type='nominal' />
+            <column-instance column='[artist]' derivation='None' name='[none:artist:nk]' pivot='key' type='nominal' />
+            <column-instance column='[tsne-2d-one]' derivation='None' name='[none:tsne-2d-one:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[tsne-2d-two]' derivation='None' name='[none:tsne-2d-two:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Flexing]' derivation='Sum' name='[sum:Flexing:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Lyricism]' derivation='Sum' name='[sum:Lyricism:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Sex &amp; Romance]' derivation='Sum' name='[sum:Sex &amp; Romance:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Turn-Up]' derivation='Sum' name='[sum:Turn-Up:qk]' pivot='key' type='quantitative' />
+            <column caption='Tsne-2D-One' datatype='real' name='[tsne-2d-one]' role='measure' type='quantitative' />
+            <column caption='Tsne-2D-Two' datatype='real' name='[tsne-2d-two]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ildqio1vqwb531ckthko179qolc].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ildqio1vqwb531ckthko179qolc].[sum:Flexing:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ildqio1vqwb531ckthko179qolc].[sum:Lyricism:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ildqio1vqwb531ckthko179qolc].[sum:Sex &amp; Romance:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ildqio1vqwb531ckthko179qolc].[sum:Turn-Up:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ildqio1vqwb531ckthko179qolc].[Action (Artist,Cluster,Tsne-2D-One,Tsne-2D-Two)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[artist]' />
+              <groupfilter function='level-members' level='[cluster]' />
+              <groupfilter function='level-members' level='[none:tsne-2d-one:ok]' />
+              <groupfilter function='level-members' level='[none:tsne-2d-two:ok]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ildqio1vqwb531ckthko179qolc].[:Measure Names]</column>
+            <column>[federated.0ildqio1vqwb531ckthko179qolc].[Action (Artist,Cluster,Tsne-2D-One,Tsne-2D-Two)]</column>
+            <column>[federated.0ildqio1vqwb531ckthko179qolc].[none:Calculation_1710734556707942401:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0ildqio1vqwb531ckthko179qolc].[Multiple Values]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.0ildqio1vqwb531ckthko179qolc].[:Measure Names]' value='Impact' />
+            <format attr='color' field='[federated.0ildqio1vqwb531ckthko179qolc].[:Measure Names]' value='#000000' />
+            <format attr='font-size' field='[federated.0ildqio1vqwb531ckthko179qolc].[:Measure Names]' value='12' />
+            <format attr='text-align' field='[federated.0ildqio1vqwb531ckthko179qolc].[:Measure Names]' value='auto' />
+            <format attr='color' field='[federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk]' value='#000000' />
+            <format attr='font-size' field='[federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk]' value='12' />
+            <format attr='font-weight' field='[federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk]' value='bold' />
+            <format attr='font-family' field='[federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk]' value='Impact' />
+            <format attr='display' field='[federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk]' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ildqio1vqwb531ckthko179qolc].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0ildqio1vqwb531ckthko179qolc].[Multiple Values]</rows>
+        <cols>([federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk] / [federated.0ildqio1vqwb531ckthko179qolc].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{AD1CAC9E-1878-4621-B721-775D37B38D64}' />
+    </worksheet>
+    <worksheet name='Word Rate'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tsne_df_v2' name='federated.0ildqio1vqwb531ckthko179qolc' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Avg' datatype='real' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='0.086499999999999994'>
+              <calculation class='tableau' formula='0.086499999999999994' />
+            </column>
+            <column caption='Search' datatype='string' name='[Parameter 3]' param-domain-type='any' role='measure' type='nominal' value='&quot;&quot;'>
+              <calculation class='tableau' formula='&quot;&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0ildqio1vqwb531ckthko179qolc'>
+            <column caption='Search Filter' datatype='boolean' name='[Calculation_1710734556707942401]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CONTAINS(lower([artist]), lower([Parameters].[Parameter 3]))' />
+            </column>
+            <column datatype='real' name='[Unique Word Rate]' role='measure' type='quantitative' />
+            <column caption='Artist' datatype='string' name='[artist]' role='dimension' type='nominal' />
+            <column caption='Cluster' datatype='string' name='[cluster]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1710734556707942401]' derivation='None' name='[none:Calculation_1710734556707942401:nk]' pivot='key' type='nominal' />
+            <column-instance column='[artist]' derivation='None' name='[none:artist:nk]' pivot='key' type='nominal' />
+            <column-instance column='[tsne-2d-one]' derivation='None' name='[none:tsne-2d-one:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[tsne-2d-two]' derivation='None' name='[none:tsne-2d-two:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Unique Word Rate]' derivation='Sum' name='[sum:Unique Word Rate:qk]' pivot='key' type='quantitative' />
+            <column caption='Tsne-2D-One' datatype='real' name='[tsne-2d-one]' role='measure' type='quantitative' />
+            <column caption='Tsne-2D-Two' datatype='real' name='[tsne-2d-two]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ildqio1vqwb531ckthko179qolc].[Action (Artist,Cluster,Tsne-2D-One,Tsne-2D-Two)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[artist]' />
+              <groupfilter function='level-members' level='[cluster]' />
+              <groupfilter function='level-members' level='[none:tsne-2d-one:ok]' />
+              <groupfilter function='level-members' level='[none:tsne-2d-two:ok]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ildqio1vqwb531ckthko179qolc].[Action (Artist,Cluster,Tsne-2D-One,Tsne-2D-Two)]</column>
+            <column>[federated.0ildqio1vqwb531ckthko179qolc].[none:Calculation_1710734556707942401:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk]' value='false' />
+            <format attr='font-family' field='[federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk]' value='Impact' />
+            <format attr='color' field='[federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk]' value='#000000' />
+            <format attr='font-size' field='[federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk]' value='12' />
+            <format attr='text-format' field='[federated.0ildqio1vqwb531ckthko179qolc].[sum:Unique Word Rate:qk]' value='p0%' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dotted' />
+            <format attr='stroke-size' id='refline0' value='4' />
+            <format attr='stroke-color' id='refline0' value='#000000' />
+            <format attr='background-color' id='refline0' value='#ffffff4b' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+            <format attr='stroke-size' id='refline1' value='4' />
+            <format attr='line-visibility' id='refline1' value='on' />
+            <format attr='line-pattern-only' id='refline1' value='dotted' />
+            <format attr='stroke-color' id='refline1' value='#000000' />
+            <format attr='text-format' id='refline1' value='p0%' />
+          </style-rule>
+          <style-rule element='axis-title'>
+            <format attr='font-family' field='[federated.0ildqio1vqwb531ckthko179qolc].[sum:Unique Word Rate:qk]' value='Impact' />
+            <format attr='font-size' field='[federated.0ildqio1vqwb531ckthko179qolc].[sum:Unique Word Rate:qk]' value='12' />
+            <format attr='color' field='[federated.0ildqio1vqwb531ckthko179qolc].[sum:Unique Word Rate:qk]' value='#333333' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <reference-line axis-column='[federated.0ildqio1vqwb531ckthko179qolc].[sum:Unique Word Rate:qk]' enable-instant-analytics='true' formula='average' id='refline1' label-type='automatic' probability='95' scope='per-table' value-column='[Parameters].[Parameter 1]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#75a1c7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ildqio1vqwb531ckthko179qolc].[none:artist:nk]</rows>
+        <cols>[federated.0ildqio1vqwb531ckthko179qolc].[sum:Unique Word Rate:qk]</cols>
+      </table>
+      <simple-id uuid='{E238CA9B-904D-4920-97BB-93AD637501B9}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='600' maxwidth='800' minheight='600' minwidth='800' preset-index='3' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Parameters' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Search' datatype='string' name='[Parameter 3]' param-domain-type='any' role='measure' type='nominal' value='&quot;&quot;'>
+          <calculation class='tableau' formula='&quot;&quot;' />
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='6' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97334' id='23' param='horz' w='98000' x='1000' y='1333'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97334' id='21' param='horz' w='98000' x='1000' y='1333'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97334' id='19' param='horz' w='98000' x='1000' y='1333'>
+                <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97334' id='16' param='horz' w='98000' x='1000' y='1333'>
+                  <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='97334' id='14' w='98000' x='1000' y='1333'>
+                    <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97334' id='9' param='horz' w='70244' x='1000' y='1333'>
+                      <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='97334' id='7' w='70244' x='1000' y='1333'>
+                        <zone h='97334' id='5' name='TSNE' show-title='false' w='70244' x='1000' y='1333'>
+                          <zone-style>
+                            <format attr='border-color' value='#000000' />
+                            <format attr='border-style' value='none' />
+                            <format attr='border-width' value='0' />
+                            <format attr='margin' value='4' />
+                          </zone-style>
+                        </zone>
+                      </zone>
+                    </zone>
+                    <zone h='50500' id='11' name='Topics' show-title='false' w='27756' x='71244' y='48167'>
+                      <layout-cache cell-count-w='5040' minheight='264' non-cell-size-w='1' type-h='scalable' type-w='cell' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='23664' id='12' name='Syllables' show-title='false' w='27756' x='71244' y='1333'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='23170' id='13' name='Word Rate' show-title='false' w='27756' x='71244' y='24997'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='20167' id='17' name='TSNE' pane-specification-id='0' param='[federated.0ildqio1vqwb531ckthko179qolc].[none:cluster:nk]' w='20625' x='57125' y='77333' />
+        <zone _.fcp.SetMembershipControl.false...type='paramctrl' _.fcp.SetMembershipControl.true...type-v2='paramctrl' custom-title='true' h='7333' id='24' mode='type_in' param='[Parameters].[Parameter 3]' w='20000' x='1250' y='4667'>
+          <formatted-text>
+            <run>Artist Search</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='28' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97334' id='27' param='vert' w='98000' x='1000' y='1333'>
+                <zone fixed-size='280' h='97334' id='5' is-fixed='true' name='TSNE' show-title='false' w='70244' x='1000' y='1333'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='20167' id='17' name='TSNE' pane-specification-id='0' param='[federated.0ildqio1vqwb531ckthko179qolc].[none:cluster:nk]' w='20625' x='57125' y='77333'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='134' h='23664' id='12' is-fixed='true' name='Syllables' show-title='false' w='27756' x='71244' y='1333'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='paramctrl' _.fcp.SetMembershipControl.true...type-v2='paramctrl' custom-title='true' h='7333' id='24' mode='type_in' param='[Parameters].[Parameter 3]' w='20000' x='1250' y='4667'>
+                  <formatted-text>
+                    <run>Artist Search</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='131' h='23170' id='13' is-fixed='true' name='Word Rate' show-title='false' w='27756' x='71244' y='24997'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='50500' id='11' is-fixed='true' name='Topics' show-title='false' w='27756' x='71244' y='48167'>
+                  <layout-cache cell-count-w='5040' minheight='264' non-cell-size-w='1' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{ACEA3C1C-AC88-4001-9623-1BA2C06E9ED0}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='TSNE'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ildqio1vqwb531ckthko179qolc].[none:cluster:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{44B50C98-3155-47CE-98DE-FD50AE22C79A}' />
+    </window>
+    <window class='worksheet' name='Topics'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ildqio1vqwb531ckthko179qolc].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{48517F6B-0BA3-4437-970A-BC8060D8AB53}' />
+    </window>
+    <window class='worksheet' name='Syllables'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='type_in' param='[Parameters].[Parameter 2]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7FECAF67-F4C2-4519-B95B-63FD86FFA1BE}' />
+    </window>
+    <window class='worksheet' name='Word Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='type_in' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EE03276B-0C8A-4ACE-86D7-8F8E348E03A3}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Syllables' />
+        <viewpoint name='TSNE'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Topics'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Word Rate' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{07447991-FF2C-4B6F-BBED-B4754D988155}' />
+    </window>
+  </windows>
+</workbook>

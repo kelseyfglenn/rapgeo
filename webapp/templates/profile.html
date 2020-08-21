@@ -5,27 +5,17 @@
 <head>
 </head>
 
-<body style="background-color:#b997e0;">
+<body style="background-color:goldenrod;">
+
 
   <p>
-    <b>Artist</b>:<br>
-    <b>{{ artist }}</b> <br>
-    <br>
+    <div class="container">
 
-    <b>Lyrical Content</b>:<br>
-    {{ stats['Lyrical/Misc'].round(3) }} Misc. Lyricism <br>
-    {{ stats['Bragging/Combative'].round(3) }} Flexing & Threats<br>
-    {{ stats['Money/Party'].round(3) }} Money & Partying <br>
-    {{ stats['Romance/Sex'].round(3) }} Sex & Romance<br>
-    <br>
+    <div class="artist-wrapper">
+    <span class="artist-label">Artist</span>:<br>
+    <span class="artist-name"><a href="{{ links[artist] }}" style="text-decoration: none;color: purple;">{{ artist }}</a></span> <br>
+      <br>
 
-    <b>Flow Statistics</b>:<br>
-    {{ (stats['unique_word_rate'] * 100).round(1) }}% Word Uniqueness <br>
-    {{ stats['syllables_per_line'].round(1) }} Syllables/Line<br>
-    <br>
-
-    <b>Style</b><br> 
-    {{ stats['cluster'] }} <br>
 
     <form action="/recommend" method="POST">
       <input type="hidden" name="artist" value="{{ artist }}">
@@ -33,16 +23,92 @@
     </form>
     <br>
     
-    <form action='/profile' method="POST">
-      <input type="text" name="artist">
-      <input type="submit" value="Find Another Artist">
-    </form>
-
     <form action='/' method="POST">
       <input type="submit" value="Return to Dashboard">
     </form>
 
+    <br>
+    <form action='/profile' method="POST">
+      <input type="text" name="artist">
+      <input type="submit" value="Find Artist">
+    </form>
+    </div>
+
+    <div class="stat-wrapper">
+    {% set total = stats['Lyrical/Misc'] + stats['Bragging/Combative'] + stats['Money/Party'] + stats['Romance/Sex'] %}
+    <span class='stat-category'>Lyrical Content</span>
+    <br>
+    <span class='stats'>
+    {{ ((stats['Lyrical/Misc'] / total) * 100).round(0) }}% Lyricism <br>
+    {{ ((stats['Bragging/Combative'] / total) * 100).round(0)}}% Flexing<br>
+    {{ ((stats['Money/Party'] / total) * 100).round(0) }}% Turn-Up <br>
+    {{ ((stats['Romance/Sex'] / total) * 100).round(0) }}% Sex & Romance <br>
+    </span>
+    <br>
+
+    <span class='stat-category'>Flow Statistics</span>
+    <br>
+    <span class='stats'>
+    {{ (stats['unique_word_rate'] * 100).round(1) }}% Word Uniqueness <br>
+    {{ stats['syllables_per_line'].round(1) }} Syllables/Line<br>
+    </span>
+    <br>
+
+    <span class='stat-category'>Style</span>
+      <br> 
+    <span class='stats'>
+    <span class="style">{{ stats['cluster'] }}</span>
+     <br>
+    </span>
+    <br>
+
+    </div>
+
+
+
+    <div class="button-wrapper">
+    <br>
+ 
+    </div>
+    </div>
   </p>
+  <style>
+       .container{
+           display: grid;
+           grid-gap: 5px;
+           grid-template-columns: repeat(4, 2fr);
+           justify-items: center;
+       }
+       .stat-category {
+            font-size: 20px;
+            font-family: "impact";
+       }
+
+       .stats {
+            font-size: 25px;
+            font-weight: bold;
+       }
+
+       .artist-name {
+            font-size: 60px;
+            font-weight: bold;
+            color: purple;
+       }
+
+       .artist-label {
+            font-size: 20px;
+            font-family: "impact";
+       }
+
+       .stat-wrapper {
+            grid-column-start: 2;
+       }
+
+       .style {
+            color: purple;
+       }
+
+  </style>
 </body>
 </html>
 
