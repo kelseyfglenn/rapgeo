@@ -26,10 +26,10 @@ Methodology:
     * Generate TF-IDF matrix
     * Calculate unique word and syllable rates
 * **Analysis**
-      * Topic Modeling
-      * NMF Topic Modeling to create semantic categories
-      * Combine with unique word and syllabic information and apply KMeans clustering
-      * Aggregate artists’ song categorizations to characterize their style
+    * Topic Modeling
+    * NMF Topic Modeling to create semantic categories
+    * Combine with unique word and syllabic information and apply KMeans clustering
+    * Aggregate artists’ song categorizations to characterize their style
   * **Deployment**
     * Recommender flask application
     * Tableau visualization
