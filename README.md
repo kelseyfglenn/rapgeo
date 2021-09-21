@@ -24,7 +24,7 @@ Methodology:
 * **Preprocessing**
     * Clean and tokenize text
     * Generate TF-IDF matrix
-    * Calclating unique word proportions and syllable rates
+    * Calculate unique word and syllable rates
 * **Analysis**
       * Topic Modeling
       * NMF Topic Modeling to create semantic categories
